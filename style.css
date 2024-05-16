@@ -1,0 +1,137 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(back.jpg); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
+	background-attachment: fixed; /* Fixa a imagem de fundo */
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+	position: relative; /* Remova a propriedade fixed aqui */
+    z-index: 1000;
+}
+
+header h1 {
+	font-size: 60px; 
+    margin: 20px auto; 
+}
+
+header p {
+    margin: 10px 0;
+	font-size: 18px; 
+}
+
+footer a {
+    color: #fff; /* Cor do link */
+    text-decoration: underline; /* Adiciona um sublinhado */
+    /* Adicione outros estilos conforme necessário */
+}
+
+footer a i {
+    font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    margin-right: 1px; /* Adicione um espaço à direita do ícone */
+}
+
+
+nav {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 21px;
+    display: inline-block;
+    padding: 10px 20px; /* Ajuste o espaçamento conforme necessário */
+	 transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+nav a:hover {
+    transform: scale(1.2); /* Ampliação suave ao passar o mouse */
+}
+
+.bio p {
+    font-size: 25px; /* Ajuste o tamanho conforme necessário */
+    
+}
+
+.section {
+	max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.section:hover {
+    transform: scale(1.03); /* Ampliação suave ao passar o mouse */
+}
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+}
+
+.portfolio p {
+    font-size: 25px; /* Ajuste o tamanho conforme necessário */
+}
+
+.contato p {
+    font-size: 20px; /* Ajuste o tamanho conforme necessário */
+}
+
+.slider {
+    max-width: 800px;
+    margin: 25px auto 20px; /* Ajuste a margem superior e inferior conforme necessário */
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #333;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #666;
+}
+
+.section {
+    max-width: 800px;
+    margin: 20px auto; /* Ajuste a margem superior e inferior conforme necessário */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilização adicional conforme necessário */
