@@ -2,8 +2,8 @@ body {
     font-family: 'Oswald', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(back.jpg); /* Substitua pelo caminho da sua imagem */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
+    background-image: url(ptbtncover.jpeg); /* Substitua pelo caminho da sua imagem */
+    background-size:contain; /* Ajusta o tamanho da imagem para cobrir todo o fundo */
 	background-attachment: fixed; /* Fixa a imagem de fundo */
     color: #333;
 }
@@ -31,7 +31,6 @@ header p {
 footer a {
     color: #fff; /* Cor do link */
     text-decoration: underline; /* Adiciona um sublinhado */
-    /* Adicione outros estilos conforme necessário */
 }
 
 footer a i {
@@ -46,6 +45,7 @@ nav {
     width: 100%;
     top: 0;
     background-color: #333;
+    margin-left: -20px;
 }
 
 nav ul {
@@ -105,6 +105,20 @@ nav a:hover {
     font-size: 20px; /* Ajuste o tamanho conforme necessário */
 }
 
+.contato a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.contato a:hover {
+    text-decoration: none;
+    color: #666;
+    transform: scale(1.05);
+}
+
 .slider {
     max-width: 800px;
     margin: 25px auto 20px; /* Ajuste a margem superior e inferior conforme necessário */
@@ -134,4 +148,4 @@ footer {
     color: #fff;
 }
 
-/* Estilização adicional conforme necessário */
+
