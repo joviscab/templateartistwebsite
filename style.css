@@ -223,6 +223,30 @@ body {
     overflow: hidden;
 }
 
+/* ─── VISUAL / VIDEOS ───────────────────────────────────── */
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.videos-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.video-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
 /* Responsive iframes */
 iframe {
     max-width: 100%;
@@ -369,6 +393,12 @@ footer p {
 
     .singles-grid {
         grid-template-columns: 1fr;
+    }
+
+
+    .videos-grid,
+    .videos-grid-2 {
+        grid-template-columns: 1fr;
     }
 
     .about-grid {
