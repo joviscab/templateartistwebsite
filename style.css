@@ -41,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('back.jpg') center center;
+    background: url('hero-bg.jpg') center center;
     background-size: cover;
 }
 
