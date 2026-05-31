@@ -192,42 +192,50 @@
         </div>
     </section>
 
-    <!-- LIGHTWEIGHT EFFECTS -->
+
+    <!-- EFFECTS -->
     <script>
-    // Subtle spores - only 12, GPU-friendly
+    // Wind streaks - thin lines sweeping across occasionally
     (function() {
         const canvas = document.createElement('canvas');
-        canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:0.15;';
+        canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;';
         document.body.appendChild(canvas);
         const ctx = canvas.getContext('2d');
         let w, h;
         function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
         resize();
         window.addEventListener('resize', resize);
-        const spores = Array.from({length: 12}, () => ({
-            x: Math.random() * 2000, y: Math.random() * 2000,
-            r: Math.random() * 1.2 + 0.3,
-            dy: -Math.random() * 0.15 - 0.03,
-            phase: Math.random() * 6.28
-        }));
+
+        const streaks = [];
         function draw() {
             ctx.clearRect(0, 0, w, h);
-            const t = Date.now() * 0.0005;
-            spores.forEach(p => {
-                p.x += Math.sin(t + p.phase) * 0.06;
-                p.y += p.dy;
-                if (p.y < -5) { p.y = h + 5; p.x = Math.random() * w; }
+            if (streaks.length < 3 && Math.random() < 0.006) {
+                streaks.push({
+                    x: -300,
+                    y: Math.random() * h,
+                    speed: Math.random() * 6 + 3,
+                    length: Math.random() * 250 + 80,
+                    opacity: Math.random() * 0.06 + 0.02,
+                    thickness: Math.random() * 0.8 + 0.3
+                });
+            }
+            for (let i = streaks.length - 1; i >= 0; i--) {
+                const s = streaks[i];
+                s.x += s.speed;
+                if (s.x > w + s.length) { streaks.splice(i, 1); continue; }
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.r, 0, 6.28);
-                ctx.fillStyle = 'rgba(94, 234, 212, 0.3)';
-                ctx.fill();
-            });
+                ctx.moveTo(s.x, s.y);
+                ctx.lineTo(s.x + s.length, s.y);
+                ctx.strokeStyle = `rgba(94, 234, 212, ${s.opacity})`;
+                ctx.lineWidth = s.thickness;
+                ctx.stroke();
+            }
             requestAnimationFrame(draw);
         }
         draw();
     })();
 
-    // Scroll reveal - no filters, just opacity + translate
+    // Scroll reveal
     (function() {
         const sections = document.querySelectorAll('.section');
         sections.forEach(s => {
@@ -248,43 +256,11 @@
     </script>
 
     <style>
-    .section-dark {
-        background: rgba(24, 24, 27, 0.6);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-    }
-    .album-card, .video-item, .single-item {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(94, 234, 212, 0.08);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-    .section-label {
-        background: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-    }
-    .hero-title {
-        text-shadow: 0 0 40px rgba(94, 234, 212, 0.15);
-    }
-    .contact-links a, .listen-links a {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-    }
-    .contact-links a:hover, .listen-links a:hover {
-        background: rgba(94, 234, 212, 0.1);
-        border-color: rgba(94, 234, 212, 0.3);
-        box-shadow: 0 0 20px rgba(94, 234, 212, 0.1);
-    }
-    .meta-item:hover {
-        border-left-color: rgba(94, 234, 212, 0.5);
-    }
-    .album-card:hover, .video-item:hover {
-        transform: translateY(-2px);
-        border-color: rgba(94, 234, 212, 0.15);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    }
+    .hero-title { text-shadow: 0 0 40px rgba(94, 234, 212, 0.15); }
+    .album-card:hover, .video-item:hover { transform: translateY(-2px); border-color: rgba(94, 234, 212, 0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    .contact-links a:hover, .listen-links a:hover { background: rgba(94, 234, 212, 0.1); border-color: rgba(94, 234, 212, 0.3); box-shadow: 0 0 20px rgba(94, 234, 212, 0.1); }
+    .meta-item { transition: border-left-color 0.3s ease; }
+    .meta-item:hover { border-left-color: rgba(94, 234, 212, 0.5); }
     </style>
 
 

@@ -29,10 +29,6 @@ html {
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg);
-    background-image:
-        linear-gradient(rgba(94, 234, 212, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(94, 234, 212, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
     color: var(--text);
     line-height: 1.7;
     overflow-x: hidden;
