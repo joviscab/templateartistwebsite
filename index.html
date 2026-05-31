@@ -4,88 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Schmutzler</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <h1>John Schmutzler</h1>
-        <p>Harmony Unleashed, Beats Amplified: Crafting Soundscapes and Sharing My Musical Odyssey</p>
-        
-        <nav>
-            <ul>
-                <li><a href="#slider">Home</a></li>
-                <li><a href="#bio">About Me</a></li>
-                <li><a href="#portfolio">Discography</a></li>
-				 <li><a href="#single">Last Release</a></li>
-                <li><a href="#contato">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div id="slider" class="slider">
-        <div><img src="btptn20cover.jpg" alt="Imagem 1"></div>
-        <div><img src="vinil2.jpg" alt="Imagem 2"></div>
-        <div><img src="nuvem.jpg" alt="Imagem 3"></div>
-        <!-- Adicione mais slides conforme necessário -->
-    </div>
-
-    <section id="bio" class="bio section">
-        <h2>About Me</h2>
-        <p>
-            At the tender age of 15, I embarked on an electrifying journey into the realm of experimental electronic music. Fuelled by a passion that knew no bounds, I harnessed the raw energy of analog guitar and the boundless possibilities of digital synthesizers to sculpt a sonic universe uniquely my own.
-        </p>
-        <p>
-            By the time I turned 16, I birthed my inaugural album, a testament to the fusion of youthful curiosity and artistic fervor. The canvas of my compositions paints landscapes that oscillate between darkness and nostalgia, a sonic odyssey that invites listeners to explore the depths of emotion.
-        </p>
-        <p>
-            In my world, analog warmth collides with digital precision, giving rise to soundscapes that echo the whispers of introspection. Each beat, each note, is a reflection of my personal journey, a musical autobiography that unfolds with every nuanced melody.
-        </p>
-        <p>
-            Join me in this sonic expedition, where experimentation meets emotion, and the boundaries of conventional music dissolve into an atmospheric symphony. Together, let's traverse the uncharted territories of sound, weaving tales that resonate with the soul and linger in the recesses of memory.
-        </p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tag">experimental electronic · idm · dark ambient</p>
+            <h1 class="hero-title">John<br>Schmutzler</h1>
+            <p class="hero-sub">Crafting soundscapes from the spaces between silence and noise</p>
+            <div class="hero-scroll">
+                <span>↓</span>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio" class="portfolio section">
-        <h2>Discography</h2>
-		 <p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6rMHmGEC2cG5exW9vGVWpR?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </p>
-	 <p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6RLCkmEWV8kOzSmdYokqlp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7M2yxsOt9GzXGiox4KTqrr?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <!-- LATEST RELEASE -->
+    <section class="section" id="latest">
+        <div class="container">
+            <span class="section-label">Latest Release</span>
+            <div class="latest-grid">
+                <div class="latest-embed">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5R93WI69kPGGEoYyyvH7zZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="latest-info">
+                    <h2>Resilient Branches</h2>
+                    <p class="latest-year">2024 · Album</p>
+                    <p class="latest-desc">An exploration of growth through decay — organic textures woven with synthetic frequencies, inspired by the persistence of nature reclaiming forgotten spaces.</p>
+                    <div class="listen-links">
+                        <a href="https://open.spotify.com/album/5R93WI69kPGGEoYyyvH7zZ" target="_blank">Spotify</a>
+                        <a href="https://music.amazon.com/albums/B0DJQJXM71" target="_blank">Amazon Music</a>
+                        <a href="https://music.apple.com/artist/john-schmutzler" target="_blank">Apple Music</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-<section id="single" class="single section">
-        <h2>Last Release</h2>
-		
-        <iframe width="800" height="450" src="https://www.youtube.com/embed/_6tvaoUna5Q" frameborder="0" allowfullscreen></iframe>
-       
-        <!-- Adicione links ou players para suas músicas aqui -->
+    <!-- DISCOGRAPHY -->
+    <section class="section section-dark" id="discography">
+        <div class="container">
+            <span class="section-label">Discography</span>
+
+            <h3 class="disc-category">Albums</h3>
+            <div class="albums-grid">
+                <div class="album-card">
+                    <iframe src="https://open.spotify.com/embed/album/5R93WI69kPGGEoYyyvH7zZ?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe>
+                </div>
+                <div class="album-card">
+                    <iframe src="https://open.spotify.com/embed/album/7M2yxsOt9GzXGiox4KTqrr?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe>
+                </div>
+                <div class="album-card">
+                    <iframe src="https://open.spotify.com/embed/album/6RLCkmEWV8kOzSmdYokqlp?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe>
+                </div>
+                <div class="album-card">
+                    <iframe src="https://open.spotify.com/embed/album/6rMHmGEC2cG5exW9vGVWpR?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <h3 class="disc-category">Singles</h3>
+            <div class="singles-grid">
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/5ivQrE6GurOzXC5XLX05Jv?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/5wHem1QDkz2uOtw6D8DTxC?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/1RJJOFK5yN1MLFREhqQ8A9?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/48b6rsgZudp9HME9IzL6g0?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/2uop19cFQcYPyJ2efq5DgL?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/7ztFBhpmLrkBVidGM6VKNr?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/0FWgPTyjFMGWujL3VaMgwO?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/1QrgG9KkPd0iIqv0Ngvj0u?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/4W93FWQ8qK53SbTLkrKmdV?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+                <div class="single-item"><iframe src="https://open.spotify.com/embed/track/6nhbtH39lWpTXAoqyQyKhN?utm_source=generator&theme=0" width="100%" height="80" frameBorder="0" style="border-radius:8px;" loading="lazy"></iframe></div>
+            </div>
+        </div>
     </section>
 
-    <section id="contato" class="contato section">
-        <h2>Contact Me</h2>
-        <p>Ready to elevate your next project with a captivating soundtrack?</p>
-        <p>Whether you're developing a video game, producing a movie, creating a series, working on a cartoon, or designing an artistic performance, I have the expertise and passion to craft the perfect musical score.</p>
-        <p>If you're ready to create an unforgettable auditory experience for your audience, let's start the conversation!</p>
-        <p>I'm excited to discuss the details of your project, including timelines, themes, and any specific requirements you may have.</p>        
-	    <a href="mailto:bibovitor@gmail.com">Send an Email</a>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <span class="section-label">About</span>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">Began experimenting with sound at 15 — fusing analog guitar with digital synthesis to sculpt atmospheres that live between darkness and nostalgia.</p>
+                    <p>By 16, released a debut album born from curiosity and raw sonic exploration. Each release since has been a journey deeper into the intersection of organic texture and electronic architecture.</p>
+                    <p>The music draws from abandoned places, forgotten memories, and the quiet persistence of nature reclaiming what was lost. Analog warmth meets digital precision — introspection rendered in frequency.</p>
+                </div>
+                <div class="about-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Based in</span>
+                        <span class="meta-value">Spain</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Active since</span>
+                        <span class="meta-value">2010</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Genre</span>
+                        <span class="meta-value">IDM · Experimental · Dark Ambient</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tools</span>
+                        <span class="meta-value">Analog guitar · Synthesizers · DAW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- CONTACT -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <span class="section-label">Connect</span>
+            <p class="contact-text">Open for collaborations, film scoring, game soundtracks, and artistic performances.</p>
+            <div class="contact-links">
+                <a href="https://open.spotify.com/artist/2ANpaHZqhpoX3qj6nlujZr" target="_blank">Spotify</a>
+                <a href="https://music.amazon.com/artists/B0DJQK1HM5/john-schmutzler" target="_blank">Amazon Music</a>
+                <a href="https://www.youtube.com/@johnschmutzler" target="_blank">YouTube</a>
+                <a href="mailto:bibovitor@gmail.com">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-	
-    <p>&copy; 2024 John Schmutzler | Follow me on <a href="https://www.instagram.com/joviscab" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
-	
+        <p>© 2024 John Schmutzler · All rights reserved</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
