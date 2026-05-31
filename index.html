@@ -165,7 +165,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2025 John Schmutzler · All rights reserved</p>
+        <p>© 2026 John Schmutzler · All rights reserved</p>
     </footer>
 
     <!-- PSYCHEDELIC EFFECTS -->
@@ -217,6 +217,69 @@
             requestAnimationFrame(draw);
         }
         draw();
+    })();
+    </script>
+
+    <script>
+    // Psychedelic scroll effects
+    (function() {
+        const sections = document.querySelectorAll('.section');
+        const hero = document.querySelector('.hero');
+        let ticking = false;
+
+        // Parallax + hue shift on scroll
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    const maxScroll = document.body.scrollHeight - window.innerHeight;
+                    const progress = scrollY / maxScroll;
+
+                    // Hero parallax + zoom on scroll
+                    if (hero) {
+                        const heroProgress = Math.min(scrollY / window.innerHeight, 1);
+                        hero.style.transform = `scale(${1 + heroProgress * 0.1})`;
+                        hero.style.filter = `blur(${heroProgress * 3}px) saturate(${1 + heroProgress * 2})`;
+                    }
+
+                    // Sections fade in with trippy color shift
+                    sections.forEach((section, i) => {
+                        const rect = section.getBoundingClientRect();
+                        const visible = rect.top < window.innerHeight * 0.8;
+
+                        if (visible && !section.classList.contains('revealed')) {
+                            section.classList.add('revealed');
+                            section.style.opacity = '1';
+                            section.style.transform = 'translateY(0) skewX(0deg)';
+                        }
+
+                        // Subtle skew based on scroll position within section
+                        if (rect.top > -rect.height && rect.top < window.innerHeight) {
+                            const sectionProgress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                            const skew = Math.sin(sectionProgress * Math.PI) * 0.3;
+                            const hueShift = Math.sin(sectionProgress * Math.PI + i) * 10;
+                            section.style.filter = `hue-rotate(${hueShift}deg)`;
+                        }
+                    });
+
+                    // Particles react to scroll speed
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Initialize sections as hidden
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(40px) skewX(0.5deg)';
+            section.style.transition = 'all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        });
+
+        // Reveal first section immediately if in view
+        setTimeout(() => {
+            window.dispatchEvent(new Event('scroll'));
+        }, 100);
     })();
     </script>
 
