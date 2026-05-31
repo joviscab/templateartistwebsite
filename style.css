@@ -223,6 +223,12 @@ body {
     overflow: hidden;
 }
 
+/* Responsive iframes */
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
 /* ─── ABOUT ────────────────────────────────────────────────── */
 
 .about-grid {
@@ -319,14 +325,42 @@ footer p {
 
 /* ─── RESPONSIVE ───────────────────────────────────────────── */
 
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+    .section {
+        padding: 100px 30px;
+    }
+
+    .latest-grid {
+        gap: 40px;
+    }
+
+    .about-grid {
+        gap: 50px;
+    }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
     .section {
         padding: 80px 20px;
     }
 
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-sub {
+        font-size: 0.95rem;
+    }
+
     .latest-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .latest-info h2 {
+        font-size: 2rem;
     }
 
     .albums-grid {
@@ -342,7 +376,127 @@ footer p {
         gap: 40px;
     }
 
+    .listen-links {
+        flex-wrap: wrap;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .contact-links a {
+        text-align: center;
+    }
+
+    .contact-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 16px;
+    }
+
+    .hero {
+        height: 100svh;
+    }
+
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+
+    .hero-tag {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-sub {
+        font-size: 0.85rem;
+    }
+
+    .hero-scroll {
+        bottom: -80px;
+    }
+
+    .section-label {
+        font-size: 0.6rem;
+        margin-bottom: 30px;
+    }
+
+    .latest-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .latest-desc {
+        font-size: 0.85rem;
+    }
+
+    .disc-category {
+        font-size: 1rem;
+    }
+
+    .about-lead {
+        font-size: 1rem !important;
+    }
+
+    .about-text p {
+        font-size: 0.85rem;
+    }
+
+    .meta-value {
+        font-size: 0.9rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 30px 16px;
+    }
+}
+
+/* Very tall phones / prevent hero overflow */
+@media (max-height: 600px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+}
+
+/* High-DPI / Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero {
+        background-size: cover;
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-scroll {
+        animation: none;
+    }
+}
+
+/* Touch devices - larger tap targets */
+@media (hover: none) and (pointer: coarse) {
+    .listen-links a,
+    .contact-links a {
+        padding: 12px 20px;
+        font-size: 0.85rem;
     }
 }
