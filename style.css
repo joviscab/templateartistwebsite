@@ -10,15 +10,16 @@
 }
 
 :root {
-    --bg: #0a0a0a;
-    --bg-alt: #0d0f0d;
-    --text: #e8e4e0;
-    --text-dim: #8a9a8a;
-    --text-muted: #5a6a5a;
+    --bg: #111113;
+    --bg-alt: #18181b;
+    --text: #f4f4f5;
+    --text-dim: #a1a1aa;
+    --text-muted: #71717a;
     --accent: #2d5a3f;
-    --accent-light: #4a8a6a;
-    --amber: #c4a35a;
-    --border: rgba(45, 90, 63, 0.2);
+    --accent-light: #5eead4;
+    --amber: #d4a853;
+    --border: rgba(94, 234, 212, 0.12);
+    --glass: rgba(255, 255, 255, 0.03);
 }
 
 html {
@@ -115,6 +116,8 @@ body {
 
 .section-dark {
     background: var(--bg-alt);
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .container {
@@ -132,6 +135,8 @@ body {
     padding: 6px 14px;
     border-radius: 20px;
     margin-bottom: 50px;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
 }
 
 /* ─── LATEST RELEASE ───────────────────────────────────────── */
@@ -210,6 +215,14 @@ body {
 .album-card {
     border-radius: 12px;
     overflow: hidden;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border);
 }
 
 .singles-grid {
@@ -221,6 +234,13 @@ body {
 .single-item {
     border-radius: 8px;
     overflow: hidden;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: border-color 0.3s ease;
+}
+
+.single-item:hover {
+    border-color: var(--border);
 }
 
 /* ─── VISUAL / VIDEOS ───────────────────────────────────── */
